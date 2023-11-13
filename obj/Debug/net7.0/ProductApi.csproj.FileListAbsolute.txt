@@ -67,3 +67,9 @@
 /Users/kenan/Desktop/ProductApi/obj/Debug/net7.0/ProductApi.pdb
 /Users/kenan/Desktop/ProductApi/obj/Debug/net7.0/ProductApi.genruntimeconfig.cache
 /Users/kenan/Desktop/ProductApi/obj/Debug/net7.0/ref/ProductApi.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.Extensions.Options.dll

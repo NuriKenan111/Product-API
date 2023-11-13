@@ -15,6 +15,7 @@ public class ProductsController : ControllerBase
     {
         _context = context;
     }
+    
     //localhost:5299/api/products
     [HttpGet]
     public async Task<IActionResult> GetProducts()
@@ -24,6 +25,7 @@ public class ProductsController : ControllerBase
                             .Select(x =>  ProductToDTO(x)).ToListAsync();
         return Ok(products);
     }
+
     //localhost:5299/api/products/1
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProduct(int? id)
