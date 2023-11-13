@@ -73,3 +73,11 @@
 /Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
 /Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/kenan/Desktop/ProductApi/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

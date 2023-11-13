@@ -1,5 +1,9 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using ProductApi.DTO;
 using ProductApi.Models;
 
@@ -11,11 +15,13 @@ public class UsersController : ControllerBase
 {
     private UserManager<AppUser> _userManeger;
     private readonly SignInManager<AppUser> _signInManager;
+    private IConfiguration _configuration;
 
-    public UsersController(UserManager<AppUser> userManeger, SignInManager<AppUser> signInManager)
+    public UsersController(UserManager<AppUser> userManeger, SignInManager<AppUser> signInManager, IConfiguration configuration)
     {
         _userManeger = userManeger;
         _signInManager = signInManager;
+        _configuration = configuration;
     }
     [HttpPost("register")]
     public async Task<IActionResult> CreateUser(UserDTO model){
@@ -39,6 +45,7 @@ public class UsersController : ControllerBase
         
     }
 
+    [HttpPost("login")]
     public async Task<IActionResult> Login(LoginDTO model){
         if(!ModelState.IsValid){
             return BadRequest(ModelState);
@@ -50,8 +57,25 @@ public class UsersController : ControllerBase
         var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password,true);
 
         if(result.Succeeded){
-            return Ok(new {token = "token"});
+            return Ok(new {token = GenerateJwt(user)});
         }
         return Unauthorized();
+    }
+
+    private object GenerateJwt(AppUser user)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var key = Encoding.ASCII.GetBytes (_configuration.GetSection("AppSettings:Secret").Value ?? "");
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+            Subject = new ClaimsIdentity(new Claim[]{
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.UserName ?? "")
+            }),
+            Expires = DateTime.Now.AddDays(1),
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        };
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        return tokenHandler.WriteToken(token);
     }
 }

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qqyz6aRbU5Ldb2hqBKjqedpF+Kb2BTCqjM2rUjFhsI2+98VsS9VDw+lyOdpY9iFggwMi+k42lHa26/GK0pBnRg==",
+  "dgSpecHash": "3F92MiPe1tCDkUbsoX/j1Y0My25gPqVY5IJAmhptrPIgOmy/wX3g3pvVeEM++8yPQQhj+kFcy1duGUI0E0XpDQ==",
   "success": true,
   "projectFilePath": "/Users/kenan/Desktop/ProductApi/ProductApi.csproj",
   "expectedPackageFiles": [
     "/Users/kenan/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.13/microsoft.aspnetcore.authentication.jwtbearer.7.0.13.nupkg.sha512",
     "/Users/kenan/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.13/microsoft.aspnetcore.cryptography.internal.7.0.13.nupkg.sha512",
     "/Users/kenan/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.13/microsoft.aspnetcore.cryptography.keyderivation.7.0.13.nupkg.sha512",
     "/Users/kenan/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/7.0.13/microsoft.aspnetcore.identity.entityframeworkcore.7.0.13.nupkg.sha512",
@@ -30,6 +31,12 @@
     "/Users/kenan/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/kenan/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
     "/Users/kenan/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.identitymodel.abstractions/7.0.3/microsoft.identitymodel.abstractions.7.0.3.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.0.3/microsoft.identitymodel.jsonwebtokens.7.0.3.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.identitymodel.logging/7.0.3/microsoft.identitymodel.logging.7.0.3.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.identitymodel.protocols/6.15.1/microsoft.identitymodel.protocols.6.15.1.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.15.1/microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/microsoft.identitymodel.tokens/7.0.3/microsoft.identitymodel.tokens.7.0.3.nupkg.sha512",
     "/Users/kenan/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/kenan/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/kenan/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
@@ -41,6 +48,7 @@
     "/Users/kenan/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "/Users/kenan/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "/Users/kenan/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
+    "/Users/kenan/.nuget/packages/system.identitymodel.tokens.jwt/7.0.3/system.identitymodel.tokens.jwt.7.0.3.nupkg.sha512",
     "/Users/kenan/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/kenan/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/kenan/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
