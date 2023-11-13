@@ -9,11 +9,13 @@ namespace ProductApi.Controllers;
 [Route("api/[controller]")]
 public class UsersController : ControllerBase
 {
-    private readonly UserManager<AppUser> _userManeger;
+    private UserManager<AppUser> _userManeger;
+    private readonly SignInManager<AppUser> _signInManager;
 
-    public UsersController(UserManager<AppUser> userManeger)
+    public UsersController(UserManager<AppUser> userManeger, SignInManager<AppUser> signInManager)
     {
         _userManeger = userManeger;
+        _signInManager = signInManager;
     }
     [HttpPost("register")]
     public async Task<IActionResult> CreateUser(UserDTO model){
@@ -35,5 +37,21 @@ public class UsersController : ControllerBase
         }
             return BadRequest(result.Errors);
         
+    }
+
+    public async Task<IActionResult> Login(LoginDTO model){
+        if(!ModelState.IsValid){
+            return BadRequest(ModelState);
+        }
+        var user = await _userManeger.FindByEmailAsync(model.Email);
+        if(user == null){
+            return BadRequest("Invalid Credentials");
+        }
+        var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password,true);
+
+        if(result.Succeeded){
+            return Ok(new {token = "token"});
+        }
+        return Unauthorized();
     }
 }
