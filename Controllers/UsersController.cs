@@ -73,7 +73,8 @@ public class UsersController : ControllerBase
                 new Claim(ClaimTypes.Name, user.UserName ?? "")
             }),
             Expires = DateTime.Now.AddDays(1),
-            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+            Issuer = "nurikenan.com",
         };
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
